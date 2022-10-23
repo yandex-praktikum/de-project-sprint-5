@@ -38,20 +38,6 @@ def move_couriers_to_dds():
     cur.close()
     conn.close()
 
-def move_deliveries_to_dds():
-    conn = psycopg2.connect(f"dbname='de' port='5432' user='jovyan' host='localhost' password='jovyan'")
-    cur = conn.cursor()
-    cur.execute('''
-    INSERT INTO dds.deliveries ( courier_id, courier_name) 
-    select 
-    distinct
-    courier_id ,
-    courier_name  
-    from stg.couriers;
-    ''')
-    conn.commit()
-    cur.close()
-    conn.close()
 
 def move_timestamp_to_dds():
     conn = psycopg2.connect(f"dbname='de' port='5432' user='jovyan' host='localhost' password='jovyan'")

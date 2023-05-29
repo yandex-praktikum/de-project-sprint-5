@@ -31,7 +31,7 @@ docker run \
 --mount src=lesson_sp5,target=/lessons \
 --mount src=db_sp5,target=/var/lib/postgresql/data \
 --name=de-sprint-5-server-local \
-sindb/de-pg-cr-af:latest
+cr.yandex/crp1r8pht0n0gl25aug1/de-pg-cr-af:latest
 ```
 
 После того как запустится контейнер, вам будут доступны:

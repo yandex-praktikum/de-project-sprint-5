@@ -27,10 +27,6 @@ docker run \
 -p 3000:3000 \
 -p 3002:3002 \
 -p 15432:5432 \
---mount src=airflow_sp5,target=/opt/airflow \
---mount src=lesson_sp5,target=/lessons \
---mount src=db_sp5,target=/var/lib/postgresql/data \
---name=de-sprint-5-server-local \
 cr.yandex/crp1r8pht0n0gl25aug1/de-pg-cr-af:latest
 ```
 
